@@ -1,0 +1,31 @@
+<diagram program="umletino" version="15.1"><zoom_level>9</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>54</x><y>72</y><w>324</w><h>171</h></coordinates><panel_attributes>CuentaBancaria
+--
+- cbu: String
+- saldo: double
+--
++ CuentaBancaria(String, double, String, String)
++ setTitular(Titular)
++ getTitular(): Titular</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>99</x><y>360</y><w>234</w><h>171</h></coordinates><panel_attributes>ClaveSeguridad
+--
+- codigo: String
+- ultimaModificacion: String
+--
++ ClaveSeguridad(String, String)</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>522</x><y>72</y><w>306</w><h>171</h></coordinates><panel_attributes>Titular
+--
+- nombre: String
+- dni: String
+--
++ Titular(String, String)
++ setCuentaBancaria(CuentaBancaria)
++ getCuentaBancaria(): CuentaBancaria</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>369</x><y>144</y><w>171</w><h>108</h></coordinates><panel_attributes>m1=1
+r1=- titular
+m2=- cuentaBancaria
+r2=1
+
+
+
+
+
+
+</panel_attributes><additional_attributes>10;20;170;20</additional_attributes></element><element><id>Relation</id><coordinates><x>207</x><y>234</y><w>108</w><h>144</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+- claveSeguridad</panel_attributes><additional_attributes>10;10;10;140</additional_attributes></element></diagram>
