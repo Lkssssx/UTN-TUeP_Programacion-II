@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package tp_6_colecciones_y_sistema_de_stock.Caso_Practico_1;
+package Caso_Practico_1;
 
 /**
  *
