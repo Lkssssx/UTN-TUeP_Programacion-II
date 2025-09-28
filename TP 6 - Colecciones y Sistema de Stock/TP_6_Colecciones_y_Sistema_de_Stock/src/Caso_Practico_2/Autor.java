@@ -18,6 +18,10 @@ public class Autor {
         this.nombre = nombre;
         this.nacionalidad = nacionalidad;
     }
+
+    public String getNombre() {
+        return nombre;
+    }
     
     public void mostrarInfo() {
         System.out.println("Autor: " + "id=" + id + ", nombre=" + nombre + ", nacionalidad=" + nacionalidad);

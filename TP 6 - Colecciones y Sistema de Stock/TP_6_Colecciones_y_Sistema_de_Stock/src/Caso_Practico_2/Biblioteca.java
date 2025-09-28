@@ -14,7 +14,8 @@ import java.util.HashSet;
 public class Biblioteca {
     private String nombre;
     private ArrayList<Libro> libros;
-
+    private static int  totalLibros = 0;
+    
     public Biblioteca(String nombre) {
         this.nombre = nombre;
         libros = new ArrayList<>();
@@ -24,6 +25,7 @@ public class Biblioteca {
     
     public void agregarLibro(String isbn, String titulo, int anioPublicacion, Autor autor) {
         this.libros.add(new Libro(isbn, titulo, anioPublicacion, autor));
+        totalLibros++;
     }
     
     public void listarLibros() {
@@ -51,10 +53,12 @@ public class Biblioteca {
         Libro libro = buscarLibroPorIsbn(isbn);
         System.out.println("Se elimino el libro: " + libro);
         this.libros.remove(libro);
+        totalLibros--;
     }
     
     public int obtenerCantidadDeLibros() {
-        return this.libros.size();
+        return totalLibros;
+        // return this.libros.size(); (Funciona también)
     }
     
     public ArrayList<Libro> filtrarLibrosPorAnio(int anio) {
@@ -71,7 +75,7 @@ public class Biblioteca {
         HashSet autores = new HashSet();
         
         for (Libro libro : this.libros) {
-            autores.add(libro.getAutor());
+            autores.add(libro.getAutor().getNombre());
         }
         
         System.out.println("Autores disponibles: " + autores);
